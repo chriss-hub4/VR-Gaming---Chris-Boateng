@@ -1,0 +1,1043 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --blue: #0453c7;
+  --blue-dark: #003e9b;
+  --nav-bg: rgba(5, 13, 45, 0.86);
+  --card-bg: rgba(255, 255, 255, 0.94);
+  --card-border: rgba(255, 255, 255, 0.35);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
+    url("neonbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+.bg-grid,
+body::before,
+body::after {
+  display: none ;
+  background: none ;
+  content: none ;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-wrap,
+.topbar {
+  position: relative;
+  z-index: 1;
+}
+
+.page-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 3rem;
+}
+
+.topbar {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  background: var(--nav-bg);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.nav a {
+  color: var(--white) ;
+  padding: 0.95rem 1.35rem;
+  font-size: 0.95rem;
+  line-height: 1;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav a:hover,
+.nav a:focus-visible,
+.nav a.active {
+  background: rgba(0, 229, 255, 0.18);
+  box-shadow: inset 0 -3px 0 #00d8ff;
+}
+
+.profile-link {
+  width: 58px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-link img,
+.profile-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+}
+
+.profile-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(135deg, #9d4edd, #00d8ff);
+  box-shadow: 0 0 15px rgba(0, 216, 255, 0.25);
+}
+
+.hero-copy h1,
+.hero-copy p,
+.hero-copy .eyebrow,
+.hero-text,
+.games-intro h1,
+.games-intro p,
+.booking-intro h1,
+.booking-intro p,
+.pricing-intro h1,
+.pricing-intro p,
+.accessibility-intro h1,
+.accessibility-intro p,
+.access-intro h1,
+.access-intro p,
+.content-column > h2,
+.content-column > p {
+  color: var(--white) ;
+}
+
+.glass-card,
+.glass-card *,
+.game-card,
+.game-card *,
+.game-card-content *,
+.booking-form-box,
+.booking-form-box *,
+.booking-info,
+.booking-info *,
+.price-card,
+.price-card *,
+.membership-card,
+.membership-card *,
+.pricing-info-box,
+.pricing-info-box *,
+.access-card,
+.access-card *,
+.access-info,
+.access-info *,
+.access-note,
+.access-note *,
+.access-text-box,
+.access-text-box *,
+.accessibility-info-box,
+.accessibility-info-box *,
+.accessibility-note-box,
+.accessibility-note-box *,
+.access-copy-box,
+.access-copy-box * {
+  color: var(--blue) ;
+}
+
+.cta-btn,
+.card-btn,
+.submit-btn,
+button {
+  color: var(--white) ;
+}
+
+.glass-card,
+.game-card,
+.booking-form-box,
+.booking-info,
+.price-card,
+.membership-card,
+.pricing-info-box,
+.access-card,
+.access-info,
+.access-note,
+.access-text-box,
+.accessibility-info-box,
+.accessibility-note-box,
+.access-copy-box {
+  background: var(--card-bg);
+  border: 2px solid rgba(4, 83, 199, 0.14);
+  box-shadow: var(--shadow);
+}
+
+.hero-grid,
+.about-grid {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-grid {
+  margin-top: 2rem;
+}
+
+.about-grid {
+  margin-top: 1.6rem;
+}
+
+.images-column {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-panel {
+  width: 100%;
+  border-radius: 24px;
+  padding: 1.2rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(135deg, rgba(157, 78, 221, 0.30), rgba(0, 216, 255, 0.18));
+  box-shadow: var(--shadow);
+}
+
+.hero-img-large {
+  width: 270px;
+  min-height: 190px;
+}
+
+.hero-img-small {
+  width: 205px;
+  min-height: 128px;
+}
+
+.panel-tag {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 0.7rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white) ;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hero-panel h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  color: var(--white) ;
+}
+
+.alt-panel {
+  background: linear-gradient(135deg, rgba(255, 46, 136, 0.30), rgba(0, 216, 255, 0.16));
+}
+
+.hero-copy h1,
+.content-column h2 {
+  margin: 0 0 1rem;
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.hero-text,
+.about-copy p {
+  margin: 0;
+  max-width: 620px;
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.glass-card {
+  border-radius: 24px;
+  padding: 1.5rem 1.65rem;
+}
+
+.about-copy h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.8rem;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 215px;
+  height: 58px;
+  margin-top: 1.3rem;
+  padding: 0 1.45rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #9d4edd, #00d8ff);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 0 18px rgba(0, 216, 255, 0.24);
+}
+
+.games-intro,
+.booking-intro,
+.pricing-intro,
+.accessibility-intro,
+.access-intro {
+  text-align: center;
+  max-width: 850px;
+  margin: 1rem auto 2.2rem;
+}
+
+.games-intro h1,
+.booking-intro h1,
+.pricing-intro h1,
+.accessibility-intro h1,
+.access-intro h1 {
+  margin: 0 0 1rem;
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.games-intro p,
+.booking-intro p,
+.pricing-intro p,
+.accessibility-intro p,
+.access-intro p {
+  margin: 0 auto;
+  max-width: 720px;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.game-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-card-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.game-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.game-card-content h2,
+.game-card h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.65rem;
+  line-height: 1.2;
+}
+
+.game-card-content p,
+.game-card p {
+  margin: 0 0 1.25rem;
+  line-height: 1.7;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 165px;
+  height: 58px;
+  background: var(--blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+}
+
+.card-btn:hover,
+.card-btn:focus-visible,
+.submit-btn:hover,
+.submit-btn:focus-visible,
+.cta-btn:hover,
+.cta-btn:focus-visible {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.booking-image-box {
+  display: flex;
+  justify-content: center;
+}
+
+.booking-side-img {
+  width: 100%;
+  max-width: 270px;
+  height: 340px;
+  object-fit: cover;
+}
+
+.booking-form-box,
+.booking-info {
+  padding: 1.5rem;
+}
+
+.booking-form-box h2,
+.booking-info h2 {
+  margin: 0 0 1rem;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.booking-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid rgba(4, 83, 199, 0.3);
+  color: var(--blue);
+  background: rgba(255, 255, 255, 0.98);
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 56px;
+  border: none;
+  background: var(--blue);
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.booking-info p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1.02rem;
+}
+
+.error-text {
+  color: #c62828 ;
+  min-height: 18px;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  display: block;
+}
+
+.form-message {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.success-message {
+  color: #1b7a2f ;
+}
+
+.error-message {
+  color: #c62828 ;
+}
+
+input.error,
+select.error,
+textarea.error {
+  border: 2px solid #c62828;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.price-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+
+.featured-card {
+  border-color: rgba(0, 216, 255, 0.45);
+}
+
+.featured-label {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.7rem;
+  background: var(--blue);
+  color: var(--white) ;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.price-card h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.6rem;
+}
+
+.price-value {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blue) ;
+}
+
+.price-list {
+  margin: 0 0 1.4rem;
+  padding-left: 1.2rem;
+  line-height: 1.8;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.membership-section {
+  margin-bottom: 2.5rem;
+}
+
+.membership-section h2,
+.pricing-info-box h2 {
+  margin: 0 0 1rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: var(--white) ;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.membership-card,
+.pricing-info-box {
+  padding: 1.5rem;
+}
+
+.membership-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.45rem;
+}
+
+.membership-price {
+  margin: 0 0 0.8rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--blue) ;
+}
+
+.membership-card p,
+.pricing-info-box p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.accessibility-hero,
+.access-hero {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.access-image-box,
+.access-img-box {
+  display: flex;
+  justify-content: center;
+}
+
+.access-img {
+  width: 100%;
+  max-width: 270px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.access-copy-box,
+.access-text-box,
+.accessibility-info-box,
+.accessibility-note-box,
+.access-info,
+.access-note {
+  padding: 1.5rem;
+}
+
+.access-copy-box h2,
+.access-text-box h2,
+.accessibility-info-box h2,
+.accessibility-note-box h2,
+.access-info h2,
+.access-note h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.access-copy-box p,
+.access-text-box p,
+.accessibility-info-box p,
+.accessibility-note-box p,
+.access-info p,
+.access-note p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.accessibility-grid,
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.access-card {
+  padding: 1.5rem;
+}
+
+.access-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.access-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.75;
+}
+
+.accessibility-info-box,
+.access-info {
+  margin-bottom: 2rem;
+}
+
+.accessibility-info-box .card-btn,
+.access-info .card-btn {
+  margin-top: 1.2rem;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 980px) {
+  .pricing-grid,
+  .membership-grid,
+  .accessibility-grid,
+  .access-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .about-grid,
+  .booking-layout,
+  .accessibility-hero,
+  .access-hero,
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-column,
+  .about-copy,
+  .hero-copy,
+  .games-intro,
+  .booking-intro,
+  .pricing-intro,
+  .accessibility-intro,
+  .access-intro {
+    text-align: center;
+  }
+
+  .hero-text,
+  .about-copy p,
+  .games-intro p,
+  .booking-intro p,
+  .pricing-intro p,
+  .accessibility-intro p,
+  .access-intro p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .booking-image-box,
+  .access-image-box,
+  .access-img-box {
+    justify-content: center;
+  }
+
+  .booking-side-img {
+    max-width: 320px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem 0;
+  }
+
+  .nav {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+  }
+
+  .nav a {
+    flex: 1 1 33%;
+    text-align: center;
+    padding: 0.85rem 0.6rem;
+  }
+
+  .page-wrap {
+    padding: 1.2rem 1rem 2rem;
+  }
+
+  .hero-copy h1,
+  .content-column h2,
+  .games-intro h1,
+  .booking-intro h1,
+  .pricing-intro h1,
+  .accessibility-intro h1,
+  .access-intro h1 {
+    font-size: 1.55rem;
+  }
+
+  .hero-text,
+  .about-copy p,
+  .games-intro p,
+  .booking-intro p,
+  .pricing-intro p,
+  .accessibility-intro p,
+  .access-intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-img-large {
+    width: min(100%, 300px);
+    min-height: 180px;
+  }
+
+  .hero-img-small {
+    width: min(100%, 230px);
+    min-height: 130px;
+  }
+
+  .game-card-img {
+    height: 220px;
+  }
+
+  .glass-card,
+  .game-card-content,
+  .booking-form-box,
+  .booking-info,
+  .price-card,
+  .membership-card,
+  .pricing-info-box,
+  .access-card,
+  .access-copy-box,
+  .access-text-box,
+  .accessibility-info-box,
+  .accessibility-note-box,
+  .access-info,
+  .access-note {
+    padding: 1rem;
+  }
+
+  .card-btn,
+  .submit-btn {
+    width: 100%;
+    max-width: 220px;
+    height: 52px;
+  }
+
+  .access-img,
+  .booking-side-img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.game-card,
+.game-card-content {
+  background: rgba(5, 13, 45, 0.86) ;
+  border: 1px solid rgba(255, 255, 255, 0.12) ;
+}
+
+.game-card {
+  overflow: hidden;
+}
+
+.game-card h2,
+.game-card p,
+.game-card-content h2,
+.game-card-content p {
+  color: #ffffff ;
+}
+
+.card-btn {
+  color: #ffffff ;
+}
+
+.booking-form-box,
+.booking-info {
+  background: rgba(5, 13, 45, 0.86) ;
+  border: 1px solid rgba(255, 255, 255, 0.12) ;
+}
+
+.booking-form-box h2,
+.booking-form-box label,
+.booking-form-box p,
+.booking-info h2,
+.booking-info p {
+  color: #ffffff ;
+}
+
+.booking-form-box input,
+.booking-form-box select,
+.booking-form-box textarea {
+  background: #d9d9d9 ;
+  color: #111111 ;
+  border: 1px solid #bfbfbf ;
+}
+
+.booking-form-box input::placeholder,
+.booking-form-box textarea::placeholder {
+  color: #666666 ;
+}
+
+.booking-form-box select {
+  color: #111111 ;
+}
+
+.submit-btn,
+.booking-form-box button {
+  background: #0453c7 ;
+  color: #ffffff ;
+  border: none ;
+}
+
+.error-text {
+  color: #ff4d4d ;
+}
+
+.success-message {
+  color: #66ff99 ;
+}
+
+.error-message {
+  color: #ff4d4d ;
+}
+
+.game-card,
+.game-card-content,
+.booking-form-box,
+.booking-info,
+.price-card,
+.membership-card,
+.pricing-info-box,
+.access-card,
+.access-info,
+.access-note,
+.access-text-box,
+.accessibility-info-box,
+.accessibility-note-box,
+.access-copy-box {
+  background: rgba(5, 13, 45, 0.86) ;
+  border: 1px solid rgba(255, 255, 255, 0.12) ;
+}
+
+.game-card h2,
+.game-card p,
+.game-card-content h2,
+.game-card-content p,
+
+.booking-form-box h2,
+.booking-form-box label,
+.booking-form-box p,
+.booking-info h2,
+.booking-info p,
+
+.price-card h2,
+.price-card p,
+.price-card li,
+.membership-card h3,
+.membership-card p,
+.pricing-info-box h2,
+.pricing-info-box p,
+
+.access-card h3,
+.access-card li,
+.access-info h2,
+.access-info p,
+.access-note h2,
+.access-note p,
+.access-text-box h2,
+.access-text-box p,
+.accessibility-info-box h2,
+.accessibility-info-box p,
+.accessibility-note-box h2,
+.accessibility-note-box p,
+.access-copy-box h2,
+.access-copy-box p {
+  color: #ffffff ;
+}
+
+.booking-form-box input,
+.booking-form-box select,
+.booking-form-box textarea {
+  background: #d9d9d9 ;
+  color: #111111 ;
+  border: 1px solid #bfbfbf ;
+}
+
+.booking-form-box input::placeholder,
+.booking-form-box textarea::placeholder {
+  color: #666666 ;
+}
+
+.card-btn,
+.cta-btn,
+.submit-btn,
+button {
+  background: #0453c7 ;
+  color: #ffffff ;
+  border: none ;
+}
+
+.nav a {
+  color: #ffffff ;
+}
+
+.about-grid {
+  margin-top: 6rem
+}
+
+.error-message {
+  display: block;
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.form-message.success {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border: 1px solid #badbcc;
+}
+
+.form-message.error {
+  color: #842029;
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+}

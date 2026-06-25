@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse VR | Bookings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="bookings.html" class="active">Bookings</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="accessibility.html">Accessibility</a>
+    </nav>
+
+    <a class="profile-link" href="index.html" aria-label="Open profile">
+      <img src="user-icon-vector.jpg" alt="Profile icon">
+    </a>
+  </header>
+
+  <main class="page-wrap">
+    <section class="booking-intro">
+      <h1>Book Your VR Session</h1>
+      <p>
+        Reserve your Pulse VR experience in Manchester. Choose your game,
+        select a time, and enter your details to secure your booking.
+      </p>
+    </section>
+
+    <section class="booking-layout">
+      <div class="booking-image-box">
+        <img src="OIP.jpg" alt="VR booking promotional image" class="booking-side-img">
+      </div>
+
+      <div class="booking-form-box">
+        <h2>Booking Form</h2>
+
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+
+        <form id="bookingForm" class="booking-form" novalidate>
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+            <small class="error-text" id="nameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address">
+            <small class="error-text" id="emailError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="game">Choose a Game</label>
+            <select id="game" name="game">
+              <option value="">Select a game</option>
+              <option value="Zombie Escape">Zombie Escape</option>
+              <option value="Neon Racer">Neon Racer</option>
+              <option value="Space Adventure">Space Adventure</option>
+              <option value="VR Discovery">VR Discovery</option>
+            </select>
+            <small class="error-text" id="gameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="time">Choose a Time Slot</label>
+            <select id="time" name="time">
+              <option value="">Select a time</option>
+              <option value="12:00">12:00</option>
+              <option value="14:00">14:00</option>
+              <option value="16:00">16:00</option>
+              <option value="18:00">18:00</option>
+            </select>
+            <small class="error-text" id="timeError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="players">Number of Players</label>
+            <input type="number" id="players" name="players" min="1" max="8" placeholder="Enter number of players">
+            <small class="error-text" id="playersError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="age">Your Age</label>
+            <input type="number" id="age" name="age" min="1" placeholder="Enter your age">
+            <small class="error-text" id="ageError"></small>
+          </div>
+
+          <button type="submit" class="submit-btn">Confirm Booking</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="booking-info">
+      <h2>Booking Information</h2>
+      <p>
+        Please arrive 10 minutes before your session. Group bookings are available,
+        and first-time users can choose beginner-friendly experiences. If you need
+        support with accessibility or booking assistance, please visit the
+        Accessibility page.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
