@@ -1,55 +1,88 @@
+<!-- Defines the document type and tells the browser this is an HTML5 page -->
 <!DOCTYPE html>
+
+<!-- Sets the language of the page to English -->
 <html lang="en">
+
 <head>
+  <!-- Sets the character encoding so text and symbols display correctly -->
   <meta charset="UTF-8">
+
+  <!-- Makes the page responsive on mobile, tablet, and desktop screens -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Sets the title that appears in the browser tab -->
   <title>Pulse VR | Accessibility</title>
+
+  <!-- Links the external CSS file used to style the website -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+  <!-- Header section containing the navigation bar and profile icon -->
   <header class="topbar">
+
+    <!-- Main navigation menu used to move between website pages -->
     <nav class="nav">
+
+      <!-- Link to the homepage -->
       <a href="index.html">Home</a>
+
+      <!-- Link to the games page -->
       <a href="games.html">Games</a>
+
+      <!-- Link to the bookings page -->
       <a href="bookings.html">Bookings</a>
+
+      <!-- Link to the pricing page -->
       <a href="pricing.html">Pricing</a>
+
+      <!-- Active link showing the user is currently on the Accessibility page -->
       <a href="accessibility.html" class="active">Accessibility</a>
     </nav>
 
+    <!-- Profile icon link that takes users to the bookings page -->
     <a class="profile-link" href="bookings.html" aria-label="Open profile">
       <img src="user-icon-vector.jpg" alt="Profile icon">
     </a>
   </header>
 
+  <!-- Main content wrapper for the accessibility page -->
   <main class="page-wrap">
 
+    <!-- Intro section explaining the purpose of the accessibility page -->
     <section class="access-intro">
       <h1>Accessibility at Pulse VR</h1>
       <p>
-        Pulse VR aims to provide an inclusive and accessible experience for all users.
-        This includes accessible website design and support for visitors who may be new
-        to virtual reality or may have additional needs.
+        Pulse VR aims to provide an inclusive and accessible experience for all users.  
+        This includes accessible website design and support for visitors who may be new  
+        to virtual reality or may have additional needs.  
       </p>
     </section>
 
+    <!-- Hero section containing an accessibility image and introduction text -->
     <section class="access-hero">
+
+      <!-- Image box used to display the accessibility/VR image -->
       <div class="access-img-box">
         <img src="accessibility.png.webp" alt="VR gaming image" class="access-img">
       </div>
 
+      <!-- Text box explaining how Pulse VR supports accessible VR experiences -->
       <div class="access-text-box">
         <h2>Accessible Virtual Reality Experiences</h2>
         <p>
-          Virtual reality can be challenging for some users, especially those who are new to it.
-          Pulse VR provides clear instructions, beginner-friendly games and staff support to
-          ensure that all users feel comfortable before and during their session.
+          Virtual reality can be challenging for some users, especially those who are new to it.  
+          Pulse VR provides clear instructions, beginner-friendly games and staff support to  
+          ensure that all users feel comfortable before and during their session.  
         </p>
       </div>
     </section>
 
+    <!-- Grid section containing three accessibility information cards -->
     <section class="access-grid">
 
+      <!-- Card explaining accessibility features included in the website design -->
       <div class="access-card">
         <h3>Website Accessibility</h3>
         <ul>
@@ -61,6 +94,7 @@
         </ul>
       </div>
 
+      <!-- Card explaining how Pulse VR supports new or first-time users -->
       <div class="access-card">
         <h3>Support for New Users</h3>
         <ul>
@@ -72,6 +106,7 @@
         </ul>
       </div>
 
+      <!-- Card explaining health, comfort, and safety support for users -->
       <div class="access-card">
         <h3>Health and Comfort</h3>
         <ul>
@@ -82,30 +117,30 @@
           <li>Support available if needed</li>
         </ul>
       </div>
-
     </section>
 
+    <!-- Section giving users information about how to get extra support before booking -->
     <section class="access-info">
       <h2>Getting Additional Support</h2>
       <p>
-        If you require additional support, you can review the available information before booking.
-        Pulse VR encourages users to choose games suitable to their experience level and comfort.
-        Staff are available to assist during sessions where needed.
+        If you require additional support, you can review the available information before booking.  
+        Pulse VR encourages users to choose games suitable to their experience level and comfort.  
+        Staff are available to assist during sessions where needed.  
       </p>
 
+      <!-- Call-to-action button linking users to the booking page -->
       <a href="bookings.html" class="cta-btn">Book Now</a>
     </section>
 
+    <!-- Final note explaining why accessibility matters on the website -->
     <section class="access-note">
       <h2>Why Accessibility is Important</h2>
       <p>
-        Accessibility ensures that all users, including beginners and those with different needs,
-        can enjoy the Pulse VR experience. By providing clear navigation, readable content and
-        supportive features, the website becomes easier to use and more inclusive.
+        Accessibility ensures that all users, including beginners and those with different needs,  
+        can enjoy the Pulse VR experience. By providing clear navigation, readable content and  
+        supportive features, the website becomes easier to use and more inclusive.  
       </p>
     </section>
-
   </main>
-
 </body>
 </html>
