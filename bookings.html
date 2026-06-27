@@ -1,28 +1,54 @@
+<!-- Sets up the HTML document and page language -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Sets the character encoding for the webpage -->
   <meta charset="UTF-8">
+
+  <!-- Makes the booking page responsive on different screen sizes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Sets the page title shown in the browser tab -->
   <title>Pulse VR | Bookings</title>
+
+  <!-- Connects the page to the CSS stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+  <!-- Header containing the navigation menu and profile icon -->
   <header class="topbar">
+
+    <!-- Navigation menu for moving around the website -->
     <nav class="nav" aria-label="Primary navigation">
+
+      <!-- Link to the homepage -->
       <a href="index.html">Home</a>
+
+      <!-- Link to the games page -->
       <a href="games.html">Games</a>
+
+      <!-- Active link showing the user is currently on the Bookings page -->
       <a href="bookings.html" class="active">Bookings</a>
+
+      <!-- Link to the pricing page -->
       <a href="pricing.html">Pricing</a>
+
+      <!-- Link to the accessibility page -->
       <a href="accessibility.html">Accessibility</a>
     </nav>
 
+    <!-- Profile icon link -->
     <a class="profile-link" href="index.html" aria-label="Open profile">
       <img src="user-icon-vector.jpg" alt="Profile icon">
     </a>
   </header>
 
+  <!-- Main content area for the Bookings page -->
   <main class="page-wrap">
+
+    <!-- Intro section explaining the purpose of the booking page -->
     <section class="booking-intro">
       <h1>Book Your VR Session</h1>
       <p>
@@ -31,29 +57,43 @@
       </p>
     </section>
 
+    <!-- Layout section containing the booking image and form -->
     <section class="booking-layout">
+
+      <!-- Promotional image shown next to the booking form -->
       <div class="booking-image-box">
         <img src="OIP.jpg" alt="VR booking promotional image" class="booking-side-img">
       </div>
 
+      <!-- Container for the booking form -->
       <div class="booking-form-box">
         <h2>Booking Form</h2>
 
+        <!-- Area where JavaScript displays success or error messages -->
         <div id="formMessage" class="form-message" aria-live="polite"></div>
 
+        <!-- Booking form that is validated using JavaScript -->
         <form id="bookingForm" class="booking-form" novalidate>
+
+          <!-- Full name input field -->
           <div class="form-group">
             <label for="fullName">Full Name</label>
             <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+
+            <!-- Error message area for the full name field -->
             <small class="error-text" id="nameError"></small>
           </div>
 
+          <!-- Email address input field -->
           <div class="form-group">
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" placeholder="Enter your email address">
+
+            <!-- Error message area for the email field -->
             <small class="error-text" id="emailError"></small>
           </div>
 
+          <!-- Dropdown menu for choosing a VR game -->
           <div class="form-group">
             <label for="game">Choose a Game</label>
             <select id="game" name="game">
@@ -63,9 +103,12 @@
               <option value="Space Adventure">Space Adventure</option>
               <option value="VR Discovery">VR Discovery</option>
             </select>
+
+            <!-- Error message area for the game selection -->
             <small class="error-text" id="gameError"></small>
           </div>
 
+          <!-- Dropdown menu for choosing a session time -->
           <div class="form-group">
             <label for="time">Choose a Time Slot</label>
             <select id="time" name="time">
@@ -75,26 +118,36 @@
               <option value="16:00">16:00</option>
               <option value="18:00">18:00</option>
             </select>
+
+            <!-- Error message area for the time selection -->
             <small class="error-text" id="timeError"></small>
           </div>
 
+          <!-- Input field for entering the number of players -->
           <div class="form-group">
             <label for="players">Number of Players</label>
             <input type="number" id="players" name="players" min="1" max="8" placeholder="Enter number of players">
+
+            <!-- Error message area for the number of players -->
             <small class="error-text" id="playersError"></small>
           </div>
 
+          <!-- Input field for entering the user's age -->
           <div class="form-group">
             <label for="age">Your Age</label>
             <input type="number" id="age" name="age" min="1" placeholder="Enter your age">
+
+            <!-- Error message area for the age field -->
             <small class="error-text" id="ageError"></small>
           </div>
 
+          <!-- Submit button used to confirm the booking -->
           <button type="submit" class="submit-btn">Confirm Booking</button>
         </form>
       </div>
     </section>
 
+    <!-- Extra information section for booking guidance -->
     <section class="booking-info">
       <h2>Booking Information</h2>
       <p>
@@ -106,6 +159,7 @@
     </section>
   </main>
 
+  <!-- Links the JavaScript file used to validate the booking form -->
   <script src="script.js"></script>
 </body>
 </html>
