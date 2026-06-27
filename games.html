@@ -1,28 +1,54 @@
+<!-- Sets up the HTML document and tells the browser this page uses English -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Allows the page to use standard characters and symbols correctly -->
   <meta charset="UTF-8">
+
+  <!-- Makes the page responsive on phones, tablets and computers -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Sets the title shown in the browser tab -->
   <title>Pulse VR | Games</title>
+
+  <!-- Links this HTML page to the external CSS stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+  <!-- Header section containing the navigation menu and profile icon -->
   <header class="topbar">
+
+    <!-- Main navigation links for moving between website pages -->
     <nav class="nav" aria-label="Primary navigation">
+
+      <!-- Link to the homepage -->
       <a href="index.html">Home</a>
+
+      <!-- Active link showing the user is currently on the Games page -->
       <a href="games.html" class="active">Games</a>
+
+      <!-- Link to the bookings page -->
       <a href="bookings.html">Bookings</a>
+
+      <!-- Link to the pricing page -->
       <a href="pricing.html">Pricing</a>
+
+      <!-- Link to the accessibility page -->
       <a href="accessibility.html">Accessibility</a>
     </nav>
 
+    <!-- Profile icon link that takes the user to the bookings page -->
     <a class="profile-link" href="bookings.html" aria-label="Open profile">
       <img src="user-icon-vector.jpg" alt="Profile icon">
     </a>
   </header>
 
+  <!-- Main content area for the Games page -->
   <main class="page-wrap">
+
+    <!-- Intro section explaining what types of VR games are available -->
     <section class="games-intro">
       <h1>Explore Our VR Games</h1>
       <p>
@@ -32,56 +58,77 @@
       </p>
     </section>
 
+    <!-- Grid section that displays all available VR game cards -->
     <section class="games-grid">
+
+      <!-- Game card for the Zombie Escape VR experience -->
       <article class="game-card">
         <img src="Zombie-Army-VR-image1.png" alt="Action VR game image" class="game-card-img">
+
+        <!-- Text content and booking button for this game -->
         <div class="game-card-content">
           <h2>Zombie Escape</h2>
           <p>
             Work as a team to survive a suspense-filled zombie outbreak.
             Great for groups and players who enjoy thrilling challenges.
           </p>
+
+          <!-- Button linking users to the booking page -->
           <a href="bookings.html" class="card-btn">Book Now</a>
         </div>
       </article>
 
+      <!-- Game card for the Neon Racer VR experience -->
       <article class="game-card">
         <img src="carracing.jpg" alt="Racing VR game image" class="game-card-img">
+
+        <!-- Text content and booking button for this game -->
         <div class="game-card-content">
           <h2>Neon Racer</h2>
           <p>
             Speed through futuristic tracks in a fast-paced virtual racing
             experience designed for competitive players.
           </p>
+
+          <!-- Button linking users to the booking page -->
           <a href="bookings.html" class="card-btn">Book Now</a>
         </div>
       </article>
 
+      <!-- Game card for the Space Adventure VR experience -->
       <article class="game-card">
         <img src="vradventure.jpg" alt="Adventure VR game image" class="game-card-img">
+
+        <!-- Text content and booking button for this game -->
         <div class="game-card-content">
           <h2>Space Adventure</h2>
           <p>
             Explore strange planets, complete missions, and experience
             a science-fiction world in full virtual reality.
           </p>
+
+          <!-- Button linking users to the booking page -->
           <a href="bookings.html" class="card-btn">Book Now</a>
         </div>
       </article>
 
+      <!-- Game card for the beginner-friendly VR Discovery experience -->
       <article class="game-card">
         <img src="beginnerfriendly.jpg" alt="Beginner-friendly VR game image" class="game-card-img">
+
+        <!-- Text content and booking button for this game -->
         <div class="game-card-content">
           <h2>VR Discovery</h2>
           <p>
             A beginner-friendly experience for users who are new to virtual reality.
             Ideal for first-time visitors to VR Gaming.
           </p>
+
+          <!-- Button linking users to the booking page -->
           <a href="bookings.html" class="card-btn">Book Now</a>
         </div>
       </article>
     </section>
   </main>
-
 </body>
 </html>
