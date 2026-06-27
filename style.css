@@ -1,7 +1,9 @@
+/* Applies border-box sizing to make layout spacing easier to control */
 * {
   box-sizing: border-box;
 }
 
+/* Stores reusable colour and shadow values for the website */
 :root {
   --white: #ffffff;
   --blue: #0453c7;
@@ -12,12 +14,14 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* Removes default spacing from the page and ensures the body fills the screen */
 html, body {
   min-height: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* Sets the main font, background image, overlay, and text colour for the website */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-image:
@@ -39,27 +43,32 @@ body::after {
   content: none ;
 }
 
+/* Makes images responsive so they do not overflow their containers */
 img {
   max-width: 100%;
   display: block;
 }
 
+/* Removes underlines from links */
 a {
   text-decoration: none;
 }
 
+/* Keeps the header and main page content above the background */
 .page-wrap,
 .topbar {
   position: relative;
   z-index: 1;
 }
 
+/* Controls the maximum width and spacing of the main page content */
 .page-wrap {
   max-width: 1180px;
   margin: 0 auto;
   padding: 1.5rem 2rem 3rem;
 }
 
+/* Styles the top navigation area */
 .topbar {
   max-width: 1180px;
   margin: 0 auto;
@@ -70,6 +79,7 @@ a {
   gap: 1rem;
 }
 
+/* Styles the navigation bar and gives it a rounded glass effect */
 .nav {
   display: flex;
   align-items: center;
@@ -81,6 +91,7 @@ a {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
 }
 
+/* Styles each navigation link */
 .nav a {
   color: var(--white) ;
   padding: 0.95rem 1.35rem;
@@ -89,6 +100,7 @@ a {
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Highlights navigation links when hovered, focused, or active */
 .nav a:hover,
 .nav a:focus-visible,
 .nav a.active {
@@ -96,6 +108,7 @@ a {
   box-shadow: inset 0 -3px 0 #00d8ff;
 }
 
+/* Styles the profile icon link in the header */
 .profile-link {
   width: 58px;
   height: 58px;
@@ -104,6 +117,7 @@ a {
   justify-content: center;
 }
 
+/* Makes the profile image circular */
 .profile-link img,
 .profile-avatar {
   width: 58px;
@@ -199,6 +213,7 @@ button {
   box-shadow: var(--shadow);
 }
 
+/* Creates the main two-column layout for homepage sections */
 .hero-grid,
 .about-grid {
   display: grid;
@@ -207,6 +222,7 @@ button {
   gap: 4rem;
 }
 
+/* Adds spacing above the main hero area */
 .hero-grid {
   margin-top: 2rem;
 }
@@ -215,6 +231,7 @@ button {
   margin-top: 1.6rem;
 }
 
+/* Centres images inside image columns */
 .images-column {
   display: flex;
   justify-content: center;
@@ -233,11 +250,13 @@ button {
   box-shadow: var(--shadow);
 }
 
+/* Controls the size of the large hero image */
 .hero-img-large {
   width: 270px;
   min-height: 190px;
 }
 
+/* Controls the size of the smaller about section image */
 .hero-img-small {
   width: 205px;
   min-height: 128px;
@@ -300,6 +319,7 @@ button {
   font-size: 1.8rem;
 }
 
+/* Styles the main call-to-action button */
 .cta-btn {
   display: inline-flex;
   align-items: center;
@@ -348,6 +368,7 @@ button {
   line-height: 1.7;
 }
 
+/* Creates a grid layout for the games page */
 .games-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -411,6 +432,7 @@ button {
   transform: translateY(-1px);
 }
 
+/* Styles the booking page layout with image and form columns */
 .booking-layout {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -448,6 +470,7 @@ button {
   gap: 1rem;
 }
 
+/* Styles form labels and stacks form controls vertically */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -459,6 +482,7 @@ button {
   font-size: 0.98rem;
 }
 
+/* Styles inputs, dropdowns, and text areas */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -471,6 +495,7 @@ button {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Adds a clear focus outline for keyboard accessibility */
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
@@ -478,6 +503,7 @@ button {
   outline-offset: 1px;
 }
 
+/* Styles the submit button used on the booking form */
 .submit-btn {
   display: inline-flex;
   align-items: center;
@@ -499,6 +525,7 @@ button {
   font-size: 1.02rem;
 }
 
+/* Styles error messages shown under form fields */
 .error-text {
   color: #c62828 ;
   min-height: 18px;
@@ -527,6 +554,7 @@ textarea.error {
   border: 2px solid #c62828;
 }
 
+/* Makes pricing cards display in three columns on larger screens */
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -705,9 +733,7 @@ textarea.error {
   margin-top: 1.2rem;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* Responsive styling for tablets and smaller screens */
 @media (max-width: 980px) {
   .pricing-grid,
   .membership-grid,
@@ -721,6 +747,7 @@ textarea.error {
   }
 }
 
+/* Changes multi-column layouts into single-column layouts on smaller screens */
 @media (max-width: 900px) {
   .hero-grid,
   .about-grid,
@@ -770,6 +797,7 @@ textarea.error {
   }
 }
 
+/* Mobile layout adjustments for navigation, spacing, images, and buttons */
 @media (max-width: 700px) {
   .topbar {
     flex-direction: column;
@@ -829,6 +857,7 @@ textarea.error {
     height: 220px;
   }
 
+  /* Styles reusable card sections across the website */
   .glass-card,
   .game-card-content,
   .booking-form-box,
@@ -1023,6 +1052,7 @@ button {
   margin-bottom: 12px;
 }
 
+/* Styles the message shown after the booking form is submitted */
 .form-message {
   margin-top: 15px;
   font-weight: bold;
@@ -1030,12 +1060,14 @@ button {
   border-radius: 6px;
 }
 
+/* Styles the success message after valid form submission */
 .form-message.success {
   color: #0f5132;
   background-color: #d1e7dd;
   border: 1px solid #badbcc;
 }
 
+/* Styles the error message when the form has invalid inputs */
 .form-message.error {
   color: #842029;
   background-color: #f8d7da;
