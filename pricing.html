@@ -1,28 +1,54 @@
+<!-- Sets up the HTML document and page language -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Sets the character encoding so text and symbols display correctly -->
   <meta charset="UTF-8">
+
+  <!-- Makes the page responsive on mobile, tablet, and desktop screens -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Sets the title shown in the browser tab -->
   <title>Pulse VR | Pricing</title>
+
+  <!-- Links the external CSS stylesheet to style the page -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
+  <!-- Header section containing navigation and profile icon -->
   <header class="topbar">
+
+    <!-- Main navigation menu for the website -->
     <nav class="nav" aria-label="Primary navigation">
+
+      <!-- Link to the homepage -->
       <a href="index.html">Home</a>
+
+      <!-- Link to the games page -->
       <a href="games.html">Games</a>
+
+      <!-- Link to the bookings page -->
       <a href="bookings.html">Bookings</a>
+
+      <!-- Active link showing the user is currently on the Pricing page -->
       <a href="pricing.html" class="active">Pricing</a>
+
+      <!-- Link to the accessibility page -->
       <a href="accessibility.html">Accessibility</a>
     </nav>
 
+    <!-- Profile icon linking to the bookings page -->
     <a class="profile-link" href="bookings.html" aria-label="Open profile">
       <img src="user-icon-vector.jpg" alt="Profile icon">
     </a>
   </header>
 
+  <!-- Main content wrapper for the pricing page -->
   <main class="page-wrap">
+
+    <!-- Intro section explaining the pricing options -->
     <section class="pricing-intro">
       <h1>Pricing and Memberships</h1>
       <p>
@@ -31,57 +57,81 @@
       </p>
     </section>
 
+    <!-- Grid section that displays the main pricing cards -->
     <section class="pricing-grid">
+
+      <!-- Pricing card for a single VR session -->
       <article class="price-card">
         <h2>Single Session</h2>
         <p class="price-value">£18</p>
+
+        <!-- List of features included in the single session -->
         <ul class="price-list">
           <li>1 VR session</li>
           <li>Access to beginner-friendly games</li>
           <li>Ideal for first-time visitors</li>
         </ul>
+
+        <!-- Button linking users to the bookings page -->
         <a href="bookings.html" class="card-btn">Book Now</a>
       </article>
 
+      <!-- Featured pricing card for the most popular group session -->
       <article class="price-card featured-card">
         <span class="featured-label">Most Popular</span>
         <h2>Group Session</h2>
         <p class="price-value">£60</p>
+
+        <!-- List of features included in the group session -->
         <ul class="price-list">
           <li>Up to 4 players</li>
           <li>Multiplayer game access</li>
           <li>Perfect for friends and events</li>
         </ul>
+
+        <!-- Button linking users to the bookings page -->
         <a href="bookings.html" class="card-btn">Book Now</a>
       </article>
 
+      <!-- Pricing card for a premium VR session -->
       <article class="price-card">
         <h2>Premium Session</h2>
         <p class="price-value">£28</p>
+
+        <!-- List of features included in the premium session -->
         <ul class="price-list">
           <li>Extended VR session</li>
           <li>Priority access</li>
           <li>Advanced game experiences</li>
         </ul>
+
+        <!-- Button linking users to the bookings page -->
         <a href="bookings.html" class="card-btn">Book Now</a>
       </article>
     </section>
 
+    <!-- Section showing monthly membership options -->
     <section class="membership-section">
       <h2>Membership Options</h2>
+
+      <!-- Grid layout for the membership cards -->
       <div class="membership-grid">
+
+        <!-- Bronze membership option -->
         <article class="membership-card">
           <h3>Bronze</h3>
           <p class="membership-price">£12/month</p>
           <p>1 discounted session per month and member-only offers.</p>
         </article>
 
+        <!-- Silver membership option -->
         <article class="membership-card">
           <h3>Silver</h3>
           <p class="membership-price">£20/month</p>
           <p>2 discounted sessions per month and priority booking access.</p>
         </article>
 
+        <!-- Gold membership option -->
         <article class="membership-card">
           <h3>Gold</h3>
           <p class="membership-price">£30/month</p>
@@ -90,6 +140,7 @@
       </div>
     </section>
 
+    <!-- Important information section explaining pricing rules and booking advice -->
     <section class="pricing-info-box">
       <h2>Important Pricing Information</h2>
       <p>
@@ -99,6 +150,5 @@
       </p>
     </section>
   </main>
-
 </body>
 </html>
